@@ -19,15 +19,9 @@ from django.urls import path, include
 from pypro.base import views
 
 
-def trigger_error(request):
-    division_by_zero = 1/0
-    print(division_by_zero)
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('sentry-debug/', trigger_error),
 ]
 
 if settings.DEBUG:
