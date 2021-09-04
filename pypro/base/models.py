@@ -79,7 +79,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     """
 
     first_name = models.CharField(_('first name'), max_length=150, blank=True)
-    email = models.EmailField(_('email address'), blank=True, unique=True)
+    email = models.EmailField(_('email address'), unique=True)
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
@@ -123,13 +123,3 @@ class User(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
-
-
-# A few helper functions for common logic between User and AnonymousUser.
-def _user_get_permissions(user, obj, from_name):
-    permissions = set()
-    name = 'get_%s_permissions' % from_name
-    for backend in auth.get_backends():
-        if hasattr(backend, name):
-            permissions.update(getattr(backend, name)(user, obj))
-    return permissions
