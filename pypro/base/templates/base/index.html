@@ -35,7 +35,7 @@
   </div>
 </nav>
 
-    <div class="container-fluid">
+    <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="jumbotron">
@@ -43,7 +43,7 @@
 					Minha Plataforma de Treino
 				</h2>
 				<p>
-					Este é o projeto usado para treinar a construção de um aplicativo web Django, aplicativo este consistente em uma plataforma de cursos com uma séria de features
+					Este é o projeto usado para treinar a construção de um aplicativo web Django, aplicativo este consistente em uma plataforma de cursos com uma série de features
 				</p>
 			</div>
 		</div>
@@ -52,20 +52,51 @@
 		<div class="col-md-12">
 			<div class="card">
 				<h5 class="card-header">
-					Card title
+					Conteúdo adicional genérico desta plataforma
 				</h5>
 				<div class="card-body">
 					<p class="card-text">
-						Card content
+						<img src="{% static 'img/cat.png' %}" alt="Foto de um gato"
+							 class="img-thumbnail img-responsive float-start me-3"/>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut imperdiet felis non sollicitudin fringilla.
+						Donec aliquam tincidunt dui sed elementum. Proin nec tortor mi.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare a dui ac tincidunt.
+						Sed nec nunc diam. Ut ut scelerisque nisi, et venenatis massa. Suspendisse potenti.
+						Praesent feugiat est eu cursus dignissim. Donec varius leo ac est pharetra feugiat non ac purus.
+						Quisque urna magna, cursus a elit sed, bibendum blandit arcu.
+						Phasellus tincidunt felis sit amet justo venenatis, id ultrices dolor posuere.
+						Pellentesque bibendum mattis velit, ac scelerisque lectus fringilla sed.
 					</p>
-				</div>
-				<div class="card-footer">
-					Card footer
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-  </body>
+<footer class="main-footer mt-5 pt-4 text-light">
+  <div class="container">
+	  <div class="row">
+		  <div class="col">
+			  <h3> Entre em Contato </h3>
+			  <address>
+				  <a href="5521991604604" class="text-light">+55 21 991-604-604</a>
+				  <br/>
+				  <a href="mailto:victorsanmorais@gmail.com" class="text-light">victorsanmorais@gmail.com</a>
+			  </address>
+		  </div>
+	  </div>
+  </div>
+  <div class="rights pb-4">
+	  <div class="container">
+		  <div class="row">
+			  <div class="col">
+				  {% now 'Y' %} Victor Morais. Todos direitos reservados.
+			  </div>
+		  </div>
+      </div>
+  </div>
+</footer>
+
+</body>
 </html>
