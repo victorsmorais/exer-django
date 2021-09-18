@@ -16,7 +16,7 @@ def test_status_code(resp):
 
 
 def test_title(resp):
-    assert_contains(resp, '<title>Curso teste Django</title>')
+    assert_contains(resp, '<title>Curso Teste Django - Home</title>')
 
 
 def test_home_link(resp):
