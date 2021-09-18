@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Curso Teste Django - Aperitivos{% endblock title %}
+{% block description %}Lista de videos{% endblock description %}
+{% block body %}
+
+    <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="mt-4 mb-3">Lista de vídeos genéricos</h1>
+			{% for video in videos %}
+			<li><a href="{{ video.get_absolute_url }}">{{ video.titulo | default:"Faltando título"}}</a></li>
+			{% empty %}
+			<li>Não foi encontrado nenhum vídeo</li>
+			{% endfor %}
+		</div>
+	</div>
+    </div>
+
+{% endblock body %}
