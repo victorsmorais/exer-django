@@ -6,6 +6,7 @@ class Video(models.Model):
     slug = models.CharField(max_length=33)
     titulo = models.CharField(max_length=33)
     vimeo_id = models.CharField(max_length=33)
+    creation = models.DateTimeField(auto_now_add=True)
 
     def get_absolute_url(self):
         return reverse('aperitivos:video', args=(self.slug,))
