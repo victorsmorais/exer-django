@@ -66,6 +66,7 @@ class UserAdmin(admin.ModelAdmin):
         return super().get_form(request, obj, **defaults)
 
     def get_urls(self):
+
         return [
             path(
                 '<id>/password/',
