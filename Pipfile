@@ -14,6 +14,7 @@ django-s3-folder-storage = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
 django = "*"
+django-ordered-model = "*"
 
 [dev-packages]
 flake8 = "*"
