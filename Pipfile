@@ -16,6 +16,8 @@ sentry-sdk = "*"
 django = "*"
 django-ordered-model = "*"
 model-bakery = "*"
+ipython = "*"
+django-extensions = "*"
 
 [dev-packages]
 flake8 = "*"
