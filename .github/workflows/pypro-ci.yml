@@ -39,6 +39,6 @@ jobs:
         pipenv run pytest pyprojat --cov=pyprojat
     - name: Posting Coverage
       env:
-        CODECOV_TOKEN: "11e007d5-bff3-4715-a64f-2edc8162db93"
+        CODECOV_TOKEN: "CODECOV_TOKEN"
       run: |
         pipenv run codecov
