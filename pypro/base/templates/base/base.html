@@ -41,7 +41,15 @@
         </li>
       </ul>
       {% if user.is_authenticated %}
-
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              {{ user.first_name }}
+            </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <button type="button" class="dropown-item" >Sair</button>
+          </ul>
+        </li>
       {% else %}
       <a href="{% url 'login' %} "class="btn btn-light my-2">Entrar</a>
       {% endif %}
